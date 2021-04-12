@@ -3,6 +3,7 @@ const colorTitle = document.querySelector('.color-title');
 const rgbBtn = document.querySelector('.rgb-btn'); 
 const namedBtn = document.querySelector('.named-btn'); 
 const hexBtn = document.querySelector('.hex-btn'); 
+const randomBtn = document.querySelector('.random-color-method');
 const body = document.querySelector('body');
 
 // create a function that picks a random number - rgb
@@ -44,12 +45,24 @@ function hexColor(){
   body.style.backgroundColor = finalColor;
 }
 
+function random(){
+  let randomNum = Math.floor(Math.random() * 3);
+  if(randomNum === 0){
+    body.style.backgroundColor = rgbColor();
+  } else if (randomNum === 1){
+    body.style.backgroundColor = namedColor();
+  } else if(randomNum === 2){
+    body.style.backgroundColor = hexColor();
+  } 
+}
+
 rgbBtn.addEventListener('click', rgbColor);
 namedBtn.addEventListener('click', namedColor);
 hexBtn.addEventListener('click', hexColor);
+randomBtn.addEventListener('click', random);
 
 rgbBtn.addEventListener('mouseover', () => {
-  rgbBtn.innerHTML = "RGB Colors";
+  rgbBtn.innerHTML = 'RGB Colors';
 })
 
 rgbBtn.addEventListener('mouseout', () => {
@@ -57,7 +70,7 @@ rgbBtn.addEventListener('mouseout', () => {
 })
 
 namedBtn.addEventListener('mouseover', () => {
-  namedBtn.innerHTML = "Named Colors";
+  namedBtn.innerHTML = 'Named Colors';
 })
 
 namedBtn.addEventListener('mouseout', () => {
@@ -65,9 +78,17 @@ namedBtn.addEventListener('mouseout', () => {
 })
 
 hexBtn.addEventListener('mouseover', () => {
-  hexBtn.innerHTML = "Hexadecimal Colors";
+  hexBtn.innerHTML = 'Hexadecimal Colors';
 })
 
 hexBtn.addEventListener('mouseout', () => {
   hexBtn.innerHTML = 'Click Me';
+})
+
+randomBtn.addEventListener('mouseover', () => {
+  randomBtn.innerHTML = 'Random'
+})
+
+randomBtn.addEventListener('mouseout', () => {
+  randomBtn.innerHTML = 'Click Me';
 })
