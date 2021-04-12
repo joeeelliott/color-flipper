@@ -1,0 +1,36 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.color-title {
+  margin-bottom: 20px;
+  padding: 10px 40px;
+  border: 2px solid black;
+  width: auto;
+  border-radius: 20px; 
+  background-color: white;
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  outline: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
