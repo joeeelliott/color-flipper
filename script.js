@@ -10,7 +10,7 @@ const body = document.querySelector('body');
 function rgbColor() {
   let backgroundColor = `Rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
   body.style.backgroundColor = backgroundColor; 
-  colorTitle.innerHTML = `Background Color: ${backgroundColor}`;
+  colorTitle.innerHTML = `Background Color: <br> <strong>${backgroundColor}</strong>`;
 }
 
 // create a function that picks a random number - named color
@@ -19,7 +19,7 @@ function namedColor(){
 
   let random = Math.floor(Math.random() * colors.length);
   body.style.backgroundColor = colors[random];
-  colorTitle.innerHTML = `Background Color: ${colors[random]}`;
+  colorTitle.innerHTML = `Background Color: <br> <strong>${colors[random]}</strong>`;
 }
 
 // create a function that picks a random number - hex
@@ -41,7 +41,7 @@ function hexColor(){
   }
 
   const finalColor = `#${array[0]}${array[1]}${array[2]}${array[3]}${array[4]}${array[5]}`;
-  colorTitle.innerHTML = `Background Color: ${finalColor}`;
+  colorTitle.innerHTML = `Background Color: <br> <strong>${finalColor}</strong>`;
   body.style.backgroundColor = finalColor;
 }
 
